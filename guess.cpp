@@ -7,6 +7,7 @@
 using namespace std;
 
 void guess::playGame(player1& p1, player2& p2) {
+	bool correct = false;
 	size_t guessAmount = p1.word.length();
 	cout << p2.name << ", you will now try to guess " << p1.name << "'s word (ALL CAPS). You will get " << guessAmount << " guesses." << endl;
 	for (int i = 0; i < guessAmount; ++i) {
@@ -19,18 +20,21 @@ void guess::playGame(player1& p1, player2& p2) {
 			++player2Win;
 			++player1Loss;
 			++guesses;
+			correct = true;
 			break;
 		}
 		else if (guess != p1.word) {
 			cout << "Thats not correct, letter #" << i + 1 << " is " << p1.word[i] << endl;
 			++guesses;
 		}
-		else if (guess != p1.word && i == guessAmount) {
-			cout << "Good try, thats incorrect." << endl;
-			++player1Win;
-			++player2Loss;
-		}
 	}
+
+	if (!correct) {
+		cout << "Good try, thats incorrect." << endl;
+		++player1Win;
+		++player2Loss;
+	}
+
 	totalGuesses = guesses;
 	guesses = 0;
 	cout << "The word was " << p1.word << ". Thank you for playing." << endl;
