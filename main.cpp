@@ -57,6 +57,7 @@ int main() {
 			}
 			else {
 				cout << "You haven't played yet. Make another choice." << endl;
+				cout << endl;
 			}
 			break;
 
@@ -67,6 +68,7 @@ int main() {
 			}
 			else {
 				cout << "You haven't played yet. Make another choice." << endl;
+				cout << endl;
 			}
 			break;
 
@@ -77,6 +79,7 @@ int main() {
 			}
 			else {
 				cout << "You haven't played yet. Make another choice." << endl;
+				cout << endl;
 			}
 			break;
 
