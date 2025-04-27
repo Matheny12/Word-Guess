@@ -6,6 +6,7 @@ class winorlin
 	public:
 		void winlin();
 		int choice;
+		void reset();
 };
 
 #endif

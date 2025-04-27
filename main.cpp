@@ -17,6 +17,9 @@ int main() {
 	bool gamePlayed = false;
 	int mode;
 
+	wl.winlin();
+	cout << endl;
+
 	while (mode != 5) {
 		cout << "-------------- Welcome to Word Guess. Please select a mode (1-5). --------------" << endl;
 		cout << "1. Play game" << endl;
@@ -36,10 +39,9 @@ int main() {
 			p2.inputName();
 			cout << endl;
 			playersSet = true;
-
 			p1.inputWord();
-			cout << endl;
-			wl.winlin();
+
+			wl.reset();
 			gs.playGame(p1, p2);
 			gamePlayed = true;
 			cout << endl;
@@ -48,8 +50,8 @@ int main() {
 		case 2:
 			if (playersSet) {
 				p1.inputWord();
-				cout << endl;
-				wl.winlin();
+
+				wl.reset();
 				gs.playGame(p1, p2);
 				cout << endl;
 			}

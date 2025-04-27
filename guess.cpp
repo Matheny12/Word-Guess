@@ -32,6 +32,7 @@ void guess::playGame(player1& p1, player2& p2) {
 		}
 	}
 	totalGuesses = guesses;
+	guesses = 0;
 	cout << "The word was " << p1.word << ". Thank you for playing." << endl;
 	return;
 }
