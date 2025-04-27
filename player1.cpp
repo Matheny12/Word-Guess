@@ -11,6 +11,6 @@ void player1::inputName() {
 }
 
 void player1::inputWord() {
-	cout << "Player 1, now input your word (ALL CAPS): ";
+	cout << name << ", now input your word (ALL CAPS): ";
 	cin >> word;
 }
